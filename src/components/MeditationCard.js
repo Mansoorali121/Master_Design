@@ -1,14 +1,17 @@
-import { ImageBackground, StyleSheet, Text, View } from 'react-native';
+import { Dimensions, ImageBackground, StyleSheet, Text, View } from 'react-native';
 import React from 'react';
 import { s, vs } from 'react-native-size-matters';
 import { VideoIcon } from '../assets/Icons';
 
-const MeditationCard = () => {
+const phoneWidth = Dimensions.get("window").width
+
+const cardWidth =( phoneWidth - s (12) *3 ) /2
+const MeditationCard = ({imageURL,title,date}) => {
   return (
     <ImageBackground
       style={styles.imagecontainer}
       source={{
-        uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCaW54B8_rlZItRtAeT_RoZIAiuxH42hYd5Q&s',
+        uri: imageURL,
       }}
       imageStyle={styles.image}
     >
@@ -18,10 +21,10 @@ const MeditationCard = () => {
 
       </View>
       <View style={styles.cardcontent}>
-        <Text style={styles.title}>Meditations</Text>
+        <Text style={styles.title}>{title}</Text>
         <View style={{flexDirection:"row", alignItems:"center"}}>
             <VideoIcon/>
-            <Text style={styles.datetext}>31st Jan - 09:00 am  </Text>
+            <Text style={styles.datetext}>{date}  </Text>
         </View>
       </View>
     </ImageBackground>
@@ -32,8 +35,8 @@ export default MeditationCard;
 
 const styles = StyleSheet.create({
   imagecontainer: {
-    height: vs(161),
-    width: s(166),
+    height: vs(140),
+    width: cardWidth,
     borderRadius: s(16),
     overflow: 'hidden',
   },

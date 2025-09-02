@@ -2,7 +2,7 @@ export const dummyData = [
     {
       id: '1',
       image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80',
-      title: 'MAAAAA',
+      title: 'Sun-rise',
       date: '6 Feb - 10:00 pm',
     },
     {
@@ -31,6 +31,12 @@ export const dummyData = [
     },
     {
       id: '6',
+      image: 'https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80',
+      title: 'Meditations',
+      date: '31st Jan - 09:00 am',
+    },
+    {
+      id: '7',
       image: 'https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80',
       title: 'Meditations',
       date: '31st Jan - 09:00 am',
