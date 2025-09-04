@@ -6,6 +6,7 @@ import PaymentMethodCard from '../components/PaymentMethodCard';
 import { CashICon, VisaIcon } from '../assets/Icons';
 import PaymentList from '../components/PaymentList';
 import BankCardbox from '../components/BankCardbox';
+import AddButton from '../components/AddButton';
 
 const PaymentScreen = () => {
   return (
@@ -35,6 +36,7 @@ const PaymentScreen = () => {
       {/* Bank Card Box  */}
       <View style={{paddingHorizontal:s(16)}}>
         <BankCardbox/>
+        <AddButton/>
       </View>
     </View>
   );
