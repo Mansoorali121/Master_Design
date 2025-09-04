@@ -5,6 +5,7 @@ import { s, vs } from 'react-native-size-matters';
 import PaymentMethodCard from '../components/PaymentMethodCard';
 import { CashICon, VisaIcon } from '../assets/Icons';
 import PaymentList from '../components/PaymentList';
+import BankCardbox from '../components/BankCardbox';
 
 const PaymentScreen = () => {
   return (
@@ -31,6 +32,10 @@ const PaymentScreen = () => {
       {/* <PaymentMethodCard  title="Cash" icon={<CashICon/>}/>
       <PaymentMethodCard isselected={true}  title="Visa" icon={<VisaIcon/>}/> */}
       <PaymentList/>
+      {/* Bank Card Box  */}
+      <View style={{paddingHorizontal:s(16)}}>
+        <BankCardbox/>
+      </View>
     </View>
   );
 };
